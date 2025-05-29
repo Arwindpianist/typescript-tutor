@@ -10,15 +10,14 @@ import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { useTheme } from 'next-themes';
 
-interface LessonPageProps {
-  params: {
-    slug: string;
-  };
+type Props = {
+  params: { slug: string }
+  searchParams: { [key: string]: string | string[] | undefined }
 }
 
 const MonacoEditor = dynamic(() => import('@monaco-editor/react').then(mod => mod.default), { ssr: false });
 
-export default function LessonPage({ params }: LessonPageProps) {
+export default function LessonPage({ params }: Props) {
   const lesson = lessons.find(l => l.id === params.slug);
   
   if (!lesson) {
