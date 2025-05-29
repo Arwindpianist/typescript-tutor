@@ -1,16 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    // Remove any experimental features that might not work with Node 18
-  },
-  // Ensure compatibility with Node 18
+  // Remove experimental features
   typescript: {
-    // During builds, ignore TypeScript errors for faster development
-    ignoreBuildErrors: true,
+    // Enable type checking during build
+    ignoreBuildErrors: false,
   },
   eslint: {
-    // During builds, ignore ESLint errors for faster development
-    ignoreDuringBuilds: true,
+    // Enable linting during build
+    ignoreDuringBuilds: false,
   },
   images: {
     unoptimized: true,
