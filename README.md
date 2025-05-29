@@ -1,77 +1,163 @@
 # TypeScript Tutor
 
-A modern, production-ready TypeScript learning platform with local progress tracking, lessons, and a visual roadmap.
+An interactive learning platform for mastering TypeScript through hands-on exercises, real-world examples, and interactive quizzes. Visit [typescripttutor.arwindpianist.store](https://typescripttutor.arwindpianist.store) to start learning!
 
-## Features
+## 🚀 Features
 
-- **Lessons**: Structured, interactive lessons with markdown content and exercises.
-- **Progress Tracking**: Your progress is saved locally (no central database required).
-- **Export/Import Progress**: Backup or transfer your progress between devices.
-- **Visual Roadmap**: See your learning journey and completed lessons.
-- **Exercises**: Multiple-choice and coding exercises with explanations.
-- **Time Tracking**: See how much time you've spent learning.
-- **Offline-Ready**: (Planned) Service worker support for offline learning.
+- **Interactive Lessons**: Learn TypeScript through carefully structured lessons
+- **Code Editor**: Practice TypeScript directly in your browser with Monaco Editor
+- **Progress Tracking**: Save your progress locally and track your learning journey
+- **Multiple Choice Quizzes**: Test your knowledge with interactive quizzes
+- **Responsive Design**: Learn on any device - mobile, tablet, or desktop
+- **Dark Mode**: Comfortable viewing experience in any lighting condition
+- **Search Functionality**: Quickly find lessons and topics
+- **Structured Learning Path**: Follow a carefully designed curriculum
 
-## Getting Started
+## 🛠️ Technologies Used
 
-1. **Install dependencies**
-   ```bash
-   npm install
-   ```
-2. **Run the development server**
-   ```bash
-   npm run dev
-   ```
-3. **Open the app**
-   Visit [http://localhost:3000](http://localhost:3000)
+### Core Technologies
+- **Next.js 15**: React framework for production
+- **TypeScript**: For type-safe code
+- **React 19**: UI library
+- **Tailwind CSS**: Utility-first CSS framework
+- **next-themes**: Dark mode support
 
-## Testing
+### UI Components
+- **Radix UI**: Accessible UI components
+- **Lucide Icons**: Beautiful icons
+- **Monaco Editor**: Code editor integration
+- **React Markdown**: Markdown rendering
+- **Tailwind Merge**: Utility for merging Tailwind classes
+- **Class Variance Authority**: For component variants
 
-- **Run all tests**
-  ```bash
-  npm test
-  ```
-- **Test features manually**:
-  - Start a lesson, complete exercises, and mark as complete
-  - Refresh the page and verify your progress persists
-  - Use the Progress Dashboard to export and import your progress
-  - Check time tracking on lessons
-  - Try on different browsers/devices
+### Form Handling & Validation
+- **React Hook Form**: Form management
+- **Zod**: Schema validation
+- **@hookform/resolvers**: Form validation resolvers
 
-## UI Overview
+### Testing
+- **Jest**: Testing framework
+- **React Testing Library**: Component testing
+- **ts-jest**: TypeScript support for Jest
 
-- **Lesson Page**: Shows lesson content, exercises, and a button to mark as complete. Time spent is displayed.
-- **Progress Dashboard**: Shows completed lessons, total time, current lesson, and export/import buttons.
-- **Roadmap**: (Planned) Visualizes your learning journey and prerequisites.
+## 🏗️ Project Structure
 
-## How Progress is Stored
+```
+typescript-tutor/
+├── app/                    # Next.js app directory
+│   ├── lesson/            # Lesson pages
+│   ├── roadmap/           # Learning roadmap
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Homepage
+├── components/            # React components
+│   ├── ui/               # UI components
+│   ├── navigation.tsx    # Navigation bar
+│   └── quiz-block.tsx    # Quiz component
+├── lib/                  # Utility functions
+│   ├── lessons.ts        # Lesson data
+│   ├── progress.ts       # Progress tracking
+│   └── types.ts          # TypeScript types
+├── public/              # Static assets
+└── styles/             # Global styles
+```
 
-- All progress is saved in your browser's `localStorage`.
-- No data is sent to a server.
-- You can export/import your progress as a JSON file.
+## 🚀 Getting Started
 
-## Contributing
+### Prerequisites
+- Node.js 18 or later
+- npm or yarn
 
-- Add new lessons in `lib/lessons.ts`
-- Add new exercise types or UI improvements as needed
+### Installation
 
----
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/typescript-tutor.git
+cd typescript-tutor
+```
 
-For more details, see the code and comments in the relevant files.
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Run the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-## Learn More
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+### Available Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev`: Start development server
+- `npm run build`: Build for production
+- `npm run start`: Start production server
+- `npm run lint`: Run ESLint
+- `npm run test`: Run tests
+- `npm run type-check`: Check TypeScript types
+- `npm run format`: Format code with Prettier
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📚 Learning Path
 
-## Deploy on Vercel
+The curriculum is structured into three main difficulty levels:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Beginner
+- Introduction to TypeScript
+- Basic Types
+- Interfaces and Type Aliases
+- Functions and Parameters
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Intermediate
+- Advanced Types
+- Generics
+- Type Guards
+- Utility Types
+
+### Advanced
+- Decorators
+- Advanced Generics
+- Type System Internals
+- Performance Optimization
+
+## 💾 Progress Tracking
+
+Your progress is automatically saved in your browser's local storage. This includes:
+- Completed lessons
+- Quiz scores
+- Exercise completions
+
+## 🎨 Customization
+
+### Adding New Lessons
+1. Add lesson data to `lib/lessons.ts`
+2. Follow the existing lesson structure
+3. Include exercises and quizzes
+
+### Modifying Styles
+- Global styles are in `app/globals.css`
+- Component styles use Tailwind CSS
+- Dark mode styles are handled by next-themes
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Radix UI](https://www.radix-ui.com/)
+- [Monaco Editor](https://microsoft.github.io/monaco-editor/)
+- [Vercel](https://vercel.com) for hosting
+
+## 📞 Support
+
+For support, please open an issue in the GitHub repository or contact us at [arwin@arwindpianist.store](mailto:arwin@arwindpianist.store).
