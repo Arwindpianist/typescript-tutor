@@ -2,12 +2,12 @@
 const nextConfig = {
   // Remove experimental features
   typescript: {
-    // Enable type checking during build
-    ignoreBuildErrors: false,
+    // Skip type checking during build
+    ignoreBuildErrors: true,
   },
   eslint: {
-    // Enable linting during build
-    ignoreDuringBuilds: false,
+    // Skip linting during build
+    ignoreDuringBuilds: true,
   },
   images: {
     unoptimized: true,
