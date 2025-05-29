@@ -10,7 +10,26 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "TypeScript Tutor - Learn TypeScript Interactively",
   description: "Master TypeScript through hands-on coding exercises, real-world examples, and interactive quizzes.",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: '/favicon.ico',
+  },
+  openGraph: {
+    title: "TypeScript Tutor - Learn TypeScript Interactively",
+    description: "Master TypeScript through hands-on coding exercises, real-world examples, and interactive quizzes.",
+    url: 'https://typescripttutor.arwindpianist.store',
+    siteName: 'TypeScript Tutor',
+    images: [
+      {
+        url: '/typescript-tutor.png', // Replace with your actual image path in the public directory
+        width: 1200,
+        height: 630,
+        alt: 'TypeScript Tutor Web Preview',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({
